@@ -1,18 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
     <style>
         body {
             background-color: #000;
             color: #0f0;
             font-family: 'Courier New', Courier, monospace;
-            padding: 20px;
+            padding: 40px;
+        }
+        h1 {
+            border-bottom: 2px solid #0f0;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        #terminal {
+            margin-top: 20px;
+        }
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background-color: #0f0;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
         }
     </style>
 </head>
 <body>
+
     <h1>Portfolio</h1>
-    <p>Loading user data...</p>
-    <p>> Welcome to my digital workspace.</p>
+    <div id="terminal">
+        <p id="line1"></p>
+        <p id="line2"></p>
+        <span class="cursor"></span>
+    </div>
+
+    <script>
+        function typeText(elementId, text, speed, callback) {
+            let i = 0;
+            function type() {
+                if (i < text.length) {
+                    document.getElementById(elementId).innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                } else if (callback) {
+                    callback();
+                }
+            }
+            type();
+        }
+
+        window.onload = function() {
+            typeText("line1", "Loading user data...", 50, () => {
+                typeText("line2", "> Welcome to my digital workspace.", 50);
+            });
+        };
+    </script>
 </body>
 </html>
