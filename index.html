@@ -367,7 +367,7 @@ form.inputRow{display:flex;align-items:center;gap:6px;margin-top:6px;}
         <div class="badge"><span class="pulse"></span> SYSTEM ONLINE</div>
         <h1>Hello, I'm<span class="name">ADWITIYA DHUNGANA</span></h1>
         <div class="role"><span class="prompt">&gt;</span> B.Tech AI Student — building intelligent systems, one model at a time.</div>
-        <p class="desc">I study Artificial Intelligence and like getting my hands dirty across the whole stack — from training models to wiring up microcontrollers. Currently building an AI-driven energy scheduler and an assistant project called JarvisTars.</p>
+        <p class="desc">I study Artificial Intelligence and enjoy working across both software and hardware. I'm passionate about building practical AI solutions, exploring embedded systems, and turning ideas into real projects. Currently, I'm developing an AI-powered energy scheduler and an assistant called JarvisTars.</p>
         <div class="ctaRow">
           <a href="#models" class="btn btn-primary">▸ View Loaded Models</a>
           <a href="#" class="btn btn-outline">⬇ Download Dataset (Resume.pdf)</a>
@@ -386,7 +386,7 @@ form.inputRow{display:flex;align-items:center;gap:6px;margin-top:6px;}
           <div class="node" style="bottom:-4px;right:20%;"></div>
         </div>
         <div class="core">
-          <div class="coreLabel"><b>AI-OS</b>kernel: active<br>uptime: always learning</div>
+          <div class="coreLabel"><b>AI-OS</b>Status: online<br>currently building the future</div>
         </div>
       </div>
     </section>
@@ -694,9 +694,9 @@ const COMMANDS = {
         // Ensure the ASCII variable is defined in your script
         println(`<span class="asciiSmall">${typeof ASCII !== 'undefined' ? ASCII : ''}</span>`);
         println(`<span class="bold">Adwitiya Dhungana</span> — <span class="cyan">B.Tech, Artificial Intelligence</span>`);
-        println(`I care about what's happening beneath the library call — how models actually learn,`);
-        println(`and how to get them running on real hardware, not just in a notebook.`);
-        println(`That's why my projects mix AI with physical systems: automation, assistants, and energy systems.`);
+        println(`I'm curious about how things work behind the scenes. Instead of only using AI tools,`);
+        println(`I enjoy learning how models are built and how they can work with hardware to solve real problems.`);
+        println(`That's why I build projects that combine AI, automation, embedded systems, and smart technology.`);
     },
     projects() {
         println(`<span class="bold">Loaded Models</span>`);
@@ -706,16 +706,16 @@ const COMMANDS = {
     },
     skills() {
         println(`<span class="bold">Installed Modules</span>`);
-        const skills = [['Python', 85], ['C / C++ / Embedded', 75], ['PyTorch', 65], ['scikit-learn', 65], ['Arduino / IoT', 80], ['Git & Linux', 70]];
+        const skills = [['Python', 85], ['C / C++ / Embedded', 50], ['PyTorch', 10], ['scikit-learn', 5], ['Arduino / IoT', 80], ['Git & Linux', 70]];
         skills.forEach(([name, pct]) => {
             println(`<div class="bar-row"><span class="bar-label">${name}</span><div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div><span class="dim">${pct}%</span></div>`);
         });
     },
     credentials() {
         println(`<span class="bold">Verified Credentials</span>`);
-        println(`✓ Machine Learning Foundations — <span class="dim">Platform Name</span>`);
-        println(`✓ Python for Data Science — <span class="dim">Platform Name</span>`);
-        println(`✓ Embedded Systems / Arduino — <span class="dim">Platform Name</span>`);
+        println(`✓ Machine Learning Foundations — <span class="dim">N/A</span>`);
+        println(`✓ Python for Data Science — <span class="dim">N/A</span>`);
+        println(`✓ Embedded Systems / Arduino — <span class="dim">N/A</span>`);
     },
     github() { println(`Opening <a href="https://github.com/ad-63" target="_blank">github.com/ad-63</a>`); },
     resume() { println(`⬇ <a href="#">Downloading Resume.pdf</a>`); },
